@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.LinkedList;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -24,7 +25,7 @@ public class Main {
         System.out.println(hdvm.getProduct());
         System.out.println(hdvm.getProduct());
         System.out.println(hdvm.getProduct());
-        List<Product> list = hdvm.().stream().sorted()
+        List<HotDrinkVM> list = hdvm.getProduct().getPrice().stream().sorted()
                 .collect(Collectors.toList());
         System.out.println(list.toString());
     }
