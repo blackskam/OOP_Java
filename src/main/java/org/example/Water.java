@@ -25,7 +25,7 @@ public class Water extends Product {
     }
 
     @Override
-    public int getPrice() {
+    public Long getPrice() {
         return super.price;
     }
 

@@ -11,18 +11,21 @@ public class Main {
         l.add(bonAqua);
         l.add(redKey);
         wvm.putProduct(l);
-        System.out.println(wvm.getProduct());
-        System.out.println(wvm.getProduct());
-        System.out.println(wvm.getProduct());
+
         HotDrinkVM hdvm = new HotDrinkVM();
         Product coffee = new HotDrink("американо", 70, 100, 80);
         Product tea = new HotDrink("чай", 30, 200, 90);
+        Product coffe2 = new HotDrink("капучино", 300, 200, 85);
         LinkedList<Product> hd = new LinkedList<>();
         hd.add(coffee);
         hd.add(tea);
+        hd.add(coffe2);
         hdvm.putProduct(hd);
         System.out.println(hdvm.getProduct());
         System.out.println(hdvm.getProduct());
         System.out.println(hdvm.getProduct());
+        List<Product> list = hdvm.().stream().sorted()
+                .collect(Collectors.toList());
+        System.out.println(list.toString());
     }
 }

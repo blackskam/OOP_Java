@@ -2,13 +2,13 @@ package org.example;
 
 public abstract class Product {
     protected String name;
-    protected int price;
+    protected Long price;
 
     public abstract String getName();
 
     public abstract void setName(String name);
 
-    public abstract int getPrice();
+    public abstract Long getPrice();
 
-    public abstract void setPrice(int price);
+    public abstract void setPrice(Long price);
 }

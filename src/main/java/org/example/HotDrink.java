@@ -1,6 +1,8 @@
 package org.example;
 
-public class HotDrink extends Product {
+
+
+public class HotDrink extends Product implements Comparable<HotDrink> {
     private int temp;
     private int volume;
     @Override
@@ -13,7 +15,7 @@ public class HotDrink extends Product {
                 '}';
     }
 
-    public HotDrink(String name, int price, int volume, int temp){
+    public HotDrink(String name, Long price, int volume, int temp){
         super.name = name;
         super.price = price;
         this.volume = volume;
@@ -30,13 +32,22 @@ public class HotDrink extends Product {
     }
 
     @Override
-    public int getPrice() {
+    public Long getPrice() {
         return super.price;
     }
 
     @Override
-    public void setPrice(int price) {
+    public void setPrice(Long price) {
         super.price = price;
 
+    }
+
+    @Override
+    public int compareTo(HotDrink x) {
+        if ( x > this.x ) {
+            return -1;
+        } else if ( x < this.x ) {
+            return 1;
+        } else return 0;
     }
 }
